@@ -22,8 +22,14 @@
     </span>
     {{- /**/ -}}
   </a>
-  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
-    <ul class="navbar-nav">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#main_navbar"
+                  aria-controls="navbar-content" aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main_navbar">
+    <ul class="navbar-nav me-auto mb-2 mb-md-0">
       {{ $p := . -}}
       {{ range .Site.Menus.main -}}
       <li class="nav-item">
@@ -58,9 +64,34 @@
       </li>
       {{ end -}}
     </ul>
+    <ul class="navbar-nav mb-2 mb-md-0">
+      <li class="nav-item">
+        <a href="https://codeberg.org/mikolaj/topola" title="Codeberg"
+           class="nav-link">
+          <!--<i class="fa-solid fa-industry fa-xl d-lg-none me-1"></i>-->
+          Codeberg
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://webchat.oftc.net/?channels=#topola" title="IRC"
+           class="nav-link">
+          <!--<i class="fa-solid fa-industry fa-xl d-lg-none me-1"></i>-->
+          IRC
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://matrix.to/#/%23topola:tchncs.de" title="Matrix"
+           class="nav-link icon icon-github">
+          <!--<i class="fa-brands fa-github fa-xl"></i>-->
+          Matrix
+        </a>
+      </li>
+    </ul>
   </div>
   <div class="d-none d-lg-block">
     {{ partial "search-input.html" . }}
   </div>
+
+
 </div>
 </nav>
