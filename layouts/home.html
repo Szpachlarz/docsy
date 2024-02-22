@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ with .Content }}
 {{ . }}
+{{ partial "news.html" (dict "regular_pages" $.Site.RegularPages) }}
 {{ end }}
 {{ end }}
